@@ -43,19 +43,32 @@
 #
 #
 # hw
-# 1. with open("907.txt", "r") as f:
-#     counter = 0
-#     for line in f:
-#         numbers = line.split("\t")
-#         s = []
-#         for i in numbers:
-#             s.append(int(i))
-#             s = sorted(s)
+# 1. Откройте файл 907, содержащий в каждой строке пять натуральных чисел.
+# Определите количество строк таблицы, для чисел которых выполнены оба условия:
+# в строке все числа различны;
+# сумма двух наибольших чисел строки не больше суммы трёх её оставшихся чисел.
+with open("907.txt", "r") as f:
+    count = 0
+    counter = 0
+    for line in f:
+        numbers = line.split("\t")
+        s = []
+        for i in numbers:
+            s.append(int(i))
+            s = sorted(s)
+        if len(set(s)) < 5:
+            continue
+        if s[-1] + s[-2] <= s[0] + s[1] + s[2]:
+            counter += 1
+
+    print(counter)
+
+
 #
 #
 #
 #
-#     print(counter)
+#
 # 2.
 # with open("908.txt", "r") as f:
 #     s = []
