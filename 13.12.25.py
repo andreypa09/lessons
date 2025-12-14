@@ -79,6 +79,11 @@ with open("1716.txt", "r") as f:
             answer.append(z + y)
     print(len(answer), max(answer))
 
+
+
+
+
+
 #
 
 

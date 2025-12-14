@@ -65,4 +65,3 @@
 #     print(min(s) - sum(s)/len(s))
 
 
-
