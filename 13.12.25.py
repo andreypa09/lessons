@@ -20,6 +20,8 @@
 # Выведите на экран количество найденных пар, затем максимальную из сумм элементов таких пар.
 #
 # В данной задаче под парой подразумевается два идущих подряд элемента последовательности.
+#
+#
 # with open("1700.txt", "r") as f:
 #     data = list(map(int,f))
 #     min_el = min(data)
@@ -62,23 +64,26 @@
 #     print(k,max(answer))
 
 
-def func(x,l):
-    return(10 <= x <= 99) ^ (10 <= l <= 99)
-with open("1716.txt", "r") as f:
-    data=list(map(int,f))
-    min_el = 9999
-    for i in data:
-        if 10 <= i <= 99:
-            if min_el > i:
-                min_el = i
-    answer = []
-    for i in range(len(data)-1):
-        z=data[i]
-        y=data[i+1]
-        if func(z,y) and (z+y) % min_el == 0:
-            answer.append(z + y)
-    print(len(answer), max(answer))
+# def func(x,l):
+#     return(10 <= x <= 99) ^ (10 <= l <= 99)
+# with open("1716.txt", "r") as f:
+#     data=list(map(int,f))
+#     min_el = 9999
+#     for i in data:
+#         if 10 <= i <= 99:
+#             if min_el > i:
+#                 min_el = i
+#     answer = []
+#     for i in range(len(data)-1):
+#         z=data[i]
+#         y=data[i+1]
+#         if func(z,y) and (z+y) % min_el == 0:
+#             answer.append(z + y)
+#     print(len(answer), max(answer))
 
+
+# hw
+# 1.
 
 
 
