@@ -33,15 +33,14 @@
 # print(chr(72))
 
 
-a = input()
-b = ''
-for i in a:
-    if 64 > ord(i) < 91:
-        b += chr(ord(i) + 32)
-    else:
-        b += i
-print(b)
-
+# a = input()
+# b = ''
+# for i in a:
+#     if 64 > ord(i) < 91:
+#         b += chr(ord(i) + 32)
+#     else:
+#         b += i
+# print(b)
 
 
 
