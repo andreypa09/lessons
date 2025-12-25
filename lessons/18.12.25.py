@@ -42,8 +42,15 @@
 #         b += i
 # print(b)
 
-
-
+# s = "HeLLo World"
+# result = ''
+# for i in s:
+#     code = ord(i)
+#     if 65 <= code <= 90:
+#         result += chr(code + 32)
+#     else:
+#         result += i
+# print(result)
 
 
 
