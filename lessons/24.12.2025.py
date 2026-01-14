@@ -47,24 +47,24 @@
 # print(count('war hellohello war hello python', 'hello'))
 
 
-def replace(st, old, new):
-    string = ''
-    if old not in st:
-        return False
-    else:
-        for i in range(len(st)):
-            flag = False
-            for j in range(len(old)):
-                if st[i + j] != old[j]:
-                    flag = True
-                    break
-            if not flag:
-                string += new
-                i += len(old)
-            else:
-                string += st[i]
-                i += 1
-    return string
-print(replace('hello world hello python', 'hello', 'hi'))
+# def replace(st, old, new):
+#     string = ''
+#     if old not in st:
+#         return False
+#     else:
+#         for i in range(len(st)):
+#             flag = False
+#             for j in range(len(old)):
+#                 if st[i + j] != old[j]:
+#                     flag = True
+#                     break
+#             if not flag:
+#                 string += new
+#                 i += len(old)
+#             else:
+#                 string += st[i]
+#                 i += 1
+#     return string
+# print(replace('hello world hello python', 'hello', 'hi'))
 
 
