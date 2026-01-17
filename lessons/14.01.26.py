@@ -95,16 +95,34 @@
 # Определите наибольший номер строки таблицы, для которой выполнены оба условия:
 #     в строке все числа различны;
 #     удвоенная сумма минимального и максимального чисел строки равна утроенной сумме трёх её оставшихся чисел.
-with open('913.txt') as f:
-    data = [list(map(int, i.split())) for i in f]
-for pos, val in list(enumerate(data, start = 1))[::-1]:
-    norep = [i for i in val if val.count(i) == 1]
-    maxi = max(val)
-    mini = min(val)
+# with open('913.txt') as f:
+#     data = [list(map(int, i.split())) for i in f]
+# for pos, val in list(enumerate(data, start = 1))[::-1]:
+#     norep = [i for i in val if val.count(i) == 1]
+#     maxi = max(val)
+#     mini = min(val)
+#
+#
+#     if (maxi + mini) * 2 == sum() * 3:
+#         print(pos)
+#         break
 
 
-    if (maxi + mini) * 2 == sum(others) * 3:
-        print(pos)
-        break
-
-
+# hw 1.Определите сумму чисел в строке с наибольшим номером, для которой выполнены оба условия:
+# — в строке есть одно число, которое повторяется трижды, остальные четыре числа различны;
+# — среднее арифметическое неповторяющихся чисел строки не больше повторяющегося числа.
+# from statistics import mean
+# with open('914.txt') as f:
+#     data = [list(map(int, i.split())) for i in f]
+# def f1(line):
+#     cnt_3 = [i for i in line if line.count(i) == 3]
+#     not_rep = [i for i in line if line.count(i) == 1]
+#     return len(cnt_3) == 3 and len(not_rep) == 4
+# def f2(line):
+#     not_rep = [i for i in line if line.count(i) == 1]
+#     rep = [i for i in line if line.count(i) != 1]
+#     return mean(not_rep) <= rep[0]
+# for pos, val in list(enumerate(data, start = 1))[::-1]:
+#     if f1(val) and f2(val):
+#         print(sum(val))
+#         break
