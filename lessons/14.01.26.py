@@ -130,16 +130,16 @@
 # hw 2.Определите количество строк таблицы, для чисел которых выполнены оба условия:
 # – в строке все числа различны;
 # – сумма двух наибольших чисел строки не больше суммы трёх её оставшихся чисел.
-# with open("907.txt") as f:
-#     data = [list(map(int, i.split())) for i in f]
-# def f1(line):
-#     return len(set(line)) == 5
-# def f2(line):
-#     sorted_line = sorted(line)
-#     return sorted_line[4] + sorted_line[3] <= sum(sorted_line[:3])
-# count = 0
-# for line in data:
-#     if f1(line) and f2(line):
-#         count += 1
-#
-# print(count)
+with open("907.txt") as f:
+    data = [list(map(int, i.split())) for i in f]
+def f1(line):
+    return len(set(line)) == 5
+def f2(line):
+    sorted_line = sorted(line)
+    return sorted_line[4] + sorted_line[3] <= sum(sorted_line[:3])
+count = 0
+for line in data:
+    if f1(line) and f2(line):
+        count += 1
+
+print(count)
