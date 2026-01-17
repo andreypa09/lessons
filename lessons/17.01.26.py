@@ -109,9 +109,11 @@
 # Протестируйте функцию с тремя лямбда-функциями (для сложения на 2, умножения на 3 и вычитания 1),
 # лямбдой для лога (добавляющей префикс "[LOG] ").
 
-def user_action_logger(actions, log_func = lambda x: x + "[LOG] "):
-    a = 0
-    b = int(input())
-    for i in range(3):
-        actions = [lambda x: x + 2]
-        a = b + actions[i](a)
+# def user_action_logger(actions, log_func = lambda x: x + "[LOG] "):
+#     a = 0
+#     b = int(input())
+#     for i in range(3):
+#         actions = [lambda x: x + 2]
+#         a = b + actions[i](a)
+
+# hw 1.
