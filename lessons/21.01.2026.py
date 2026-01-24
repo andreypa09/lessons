@@ -97,5 +97,8 @@
 
 # 3.
 nums = list(range(-10, 11))
-
+print(list(filter(lambda x: x > 3 or x < -3, nums)))
+nums = list(map(lambda x: x ** 2, nums))
+nums = list(filter(lambda x: x % 10 < 5, nums))
+print(nums[:5])
 
