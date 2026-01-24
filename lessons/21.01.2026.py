@@ -66,10 +66,36 @@
 # nums = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 # print(list(filter(is_simple, nums)))
 
-def my_map(lambda1, nums1):
-    result = []
-    for num in nums1:
-        result.append(lambda1(num))
-    return result
-nums = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-print(my_map(lambda x: x, nums))
+# def my_map(lambda1, nums1):
+#     result = []
+#     for num in nums1:
+#         result.append(lambda1(num))
+#     return result
+# nums = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+# print(my_map(lambda x: x, nums))
+
+
+
+# hw.
+# def my_filter(lambda1,nums):
+#     result = []
+#     result1 = []
+#     for i in nums:
+#         result.append(lambda1(i))
+#         result1 = [num for num in result if lambda1(i) == 1]
+#     return result1
+# print(my_filter(lambda x:x%2 == 0,[1,2,3,4,5]))
+# не смог
+
+# 2.
+# list1 = [1, 2, 3, 4, 5]
+# list2 = [10, 20, 30, 40, 50]
+# new_list1 = list(map(lambda x,y: x + y, list1, list2))
+#
+# print(list(filter(lambda x: x >= 40, new_list1)))
+
+
+# 3.
+nums = list(range(-10, 11))
+
+
