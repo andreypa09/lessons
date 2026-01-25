@@ -67,12 +67,12 @@
 # print(counter())
 # print(counter())
 
-def create_length_filter(min_length):
-    def length_filter(a):
-        return len(a) >= min_length
-    return length_filter
-string = create_length_filter(5)
-print(string('assss'))
+# def create_length_filter(min_length):
+#     def length_filter(a):
+#         return len(a) >= min_length
+#     return length_filter
+# string = create_length_filter(5)
+# print(string('assss'))
 
 # def create_formatter(prefix, suffix):
 #     def format_text():
