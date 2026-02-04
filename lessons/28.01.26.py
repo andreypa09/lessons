@@ -70,19 +70,19 @@ from time import time
 # b = add([1,2,3,4,5])
 # print(a, b)
 
-def timeit(func):
-    def wrapper(*args, **kwargs):
-        start = time()
-        a = func(*args)
-        print(time() - start, a)
-        return a
-    return wrapper
-
-@timeit
-def test(tfunc, list_nums):
-    for i, num in enumerate(list_nums):
-        list_nums[i] = tfunc(num)
-    return list_nums
-a = test(lambda x: x**2, [1, 2, 3])
-print(a)
+# def timeit(func):
+#     def wrapper(*args, **kwargs):
+#         start = time()
+#         a = func(*args)
+#         print(time() - start, a)
+#         return a
+#     return wrapper
+#
+# @timeit
+# def test(tfunc, list_nums):
+#     for i, num in enumerate(list_nums):
+#         list_nums[i] = tfunc(num)
+#     return list_nums
+# a = test(lambda x: x**2, [1, 2, 3])
+# print(a)
 

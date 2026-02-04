@@ -78,6 +78,35 @@
 # 1. Создайте функцию с замыканием make_stats_tracker(), которая возвращает четыре функции: для добавления числа,
 # получения среднего значения, получения минимума и максимума.
 # Функция должна эффективно отслеживать все необходимые статистики.
+# def make_stats_tracker():
+#     numbers = []
+#     total = 0
+#     def add(value):
+#         nonlocal total
+#         numbers.append(value)
+#         # total += value
+#         print(f"Добавлен новый элемент {value}")
+#     def avg():
+#         return sum(numbers) / len(numbers)
+#     def mini():
+#         return min(numbers)
+#     def maxi():
+#         return max(numbers)
+#     def get_stats():
+#         dict_test = {
+#             "max": maxi(),
+#             "avg": avg(),
+#             "mini": mini(),
+#             "numbers": numbers,
+#         }
+#         return dict_test
+#     return add, get_stats
+# add_value, getstats = make_stats_tracker()
+# add_value(10)
+# add_value(11)
+# add_value(12)
+# print(getstats())
+
 
 
 
@@ -92,9 +121,16 @@
 # 3. Напишите функцию apply_to_each(numbers, operation), которая принимает список чисел и функцию-колбэк,
 # применяет эту функцию к каждому элементу списка и возвращает новый список с результатами.
 # Протестируйте её с функциями возведения в квадрат и удвоения числа.
-
-# def apply_to_each(numbers, operation):
-#     new_numbers = list(map(operation, numbers))
-#     return new_numbers
-# print(apply_to_each([1, 2, 3, 4, 5], lambda x: x * 2))
-# print(apply_to_each([1, 2, 3, 4, 5], lambda x: x * x)) 
+# def apply_to_each(fnumbers, operation):
+#     result = []
+#     for number in fnumbers:
+#         processed = operation(number)
+#         result.append(processed)
+#     return result
+# def square(number):
+#     return number * number
+# def nums_2(number):
+#     return number * 2
+# numbers = [1, 2, 3]
+# square_result = apply_to_each(numbers, square)
+# print(square_result)
