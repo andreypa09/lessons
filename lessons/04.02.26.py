@@ -75,12 +75,26 @@
 #     return n
 # print((f(2024)/16-f(2023))/f(2022))
 
-import sys
+# import sys
+# from functools import lru_cache
+# sys.setrecursionlimit(10000)
+# @lru_cache(maxsize=2 ** 8)
+# def tribonachi(n):
+#     if n < 2:
+#         return n
+#     if n == 2:
+#         return 1
+#     return tribonachi(n - 1) + tribonachi(n - 2) + tribonachi(n - 3)
+# print(tribonachi(10))
+
+
+
 from functools import lru_cache
-sys.setrecursionlimit(10000)
-@lru_cache(maxsize=2 ** 8)
-def tribonachi(n):
-    if n < 3:
-        return n
-    return tribonachi(n - 1) + tribonachi(n - 2) + tribonachi(n - 3)
-print(tribonachi(10))
+@lru_cache()
+def trap(n):
+    if n < 1:
+        return 1
+    if n == 1:
+        return 1
+    return trap(n-1) + trap(n-2)
+print(trap(9))
