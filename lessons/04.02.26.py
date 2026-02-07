@@ -89,12 +89,43 @@
 
 
 
-from functools import lru_cache
-@lru_cache()
-def trap(n):
-    if n < 1:
-        return 1
-    if n == 1:
-        return 1
-    return trap(n-1) + trap(n-2)
-print(trap(9))
+# from functools import lru_cache
+# @lru_cache()
+# def trap(n):
+#     if n < 1:
+#         return 1
+#     if n == 1:
+#         return 1
+#     return trap(n-1) + trap(n-2)
+# print(trap(9))
+
+
+
+# 1. Решите задачу о Ханойских башнях для n дисков. Выведите последовательность ходов.
+# Головоломка “Ханойские башни” состоит из трех стержней, пронумерованных числами 1, 2, 3.
+# На стержень 1 надета пирамидка из n дисков различного диаметра в порядке возрастания диаметра.
+# Диски можно перекладывать с одного стержня на другой по одному, при этом диск нельзя класть на диск меньшего диаметра.
+# Необходимо переложить всю пирамидку со стержня 1 на стержень 3 за минимальное число перекладываний.
+import sys
+sys.setrecursionlimit(10000)
+# from functools import lru_cache
+#
+# @lru_cache(maxsize=None)
+
+# def hanoi(n, source, target, auxiliary, moves = []):
+#     if n == 1:
+#         moves.append(f"Pереместить диск 1 с {source} на {target}")
+#         return moves
+#     hanoi(n - 1, source, auxiliary, target, moves)
+#
+#     moves.append(f'переместить диск {n} с {source} на {target}')
+#
+#     hanoi(n-1, auxiliary, target, source, moves)
+#     return moves
+# movesl = hanoi(3, "A", "C", "B")
+# for move in movesl:
+#     print(move)
+# print(f"Всего ходов {len(movesl)}")
+
+
+
