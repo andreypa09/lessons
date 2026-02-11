@@ -35,8 +35,11 @@ import asyncio
 #     await asyncio.sleep(num)
 #     print("f_2 end")
 # async def main():
-#     results = await asyncio.gather(one(10), two(2))
-#     print(results)
+#     await one(1)
+#     await two(2)
+
+    # results = await asyncio.gather(one(10), two(2))
+
 
 
 #     task1 = asyncio.create_task(one())
@@ -45,10 +48,9 @@ import asyncio
 #         await asyncio.sleep(1)
 #         task1.cancel()
 #         print("hello")
-    # result1 = await task1
-    # result2 = await task2
-    # await one()
-    # await two()
+#     result1 = await task1
+#     result2 = await task2
+
 
 # asyncio.run(main())
 
@@ -74,17 +76,37 @@ import asyncio
 #
 # asyncio.run(main())
 
-async def make_coffe():
-    print("Коффе готовится")
-    await asyncio.sleep(1)
-    print('Коффе готов')
-async def make_toast():
-    print('Тост готовится')
-    await asyncio.sleep(1)
-    print("Тост готов")
+# async def make_coffe():
+#     print("Коффе готовится")
+#     await asyncio.sleep(1)
+#     print('Коффе готов')
+# async def make_toast():
+#     print('Тост готовится')
+#     await asyncio.sleep(1)
+#     print("Тост готов")
+#
+# async def main():
+#     await make_coffe()
+#     await make_toast()
+#
+# asyncio.run(main())
 
-async def main():
-    await make_coffe()
-    await make_toast()
+# 1.Создайте функцию calculate(x, delay), которая ждёт delay секунд и возвращает квадрат числа x.
+# Запустите три вызова параллельно для чисел 2, 3, 4 с задержками 1, 2, 1 секунда соответственно.
+# Выведите все результаты.
+#
+# async def calculate(x, delay):
+#     await asyncio.sleep(delay)
+#     print(x ** 2)
+# async def main():
+#     await asyncio.gather(calculate(2, 1), calculate(3, 2), calculate(4, 1))
+# asyncio.run(main())
 
-asyncio.run(main())
+# 2.Создайте функцию long_task(), которая ждёт 5 секунд.
+# Запустите её как задачу, подождите 2 секунды и отмените задачу.
+# Выведите сообщение об отмене.
+
+# async def long_task():
+#     await asyncio.sleep(5)
+# def main():
+#     await asy
